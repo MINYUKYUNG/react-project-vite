@@ -4,7 +4,7 @@ import axios from 'axios';
 export const ProductLists = selector({
   key: 'ProductLists',
   get: async () => {
-    const { data } = await axios.get('https://vue-shop-oinochoe.vercel.app/products.json');
+    const { data } = await axios.get('https://fakestoreapi.com/products');
     let preNums = 4;
     let all = [], fash = [], acce = [], digi = [], preFash = [], preAcce = [], preDigi = [];
 
