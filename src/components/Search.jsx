@@ -10,10 +10,15 @@ function Search() {
 
   const search = (e) => {
     const input = e.target.value;
-    const list = all.filter((item) => {
-      return item.title.toLowerCase().indexOf(input.toLowerCase()) > -1
-    });
-    setResult(list);
+    if (e.target.value === '') {
+      setResult([]);
+      resetMe.current.value = ''
+    } else if (e.target.value !== '') {
+      const list = all.filter((item) => {
+        return item.title.toLowerCase().indexOf(input.toLowerCase()) > -1
+      });
+      setResult(list);
+    }
   }
 
   const openClose = () => {
@@ -42,7 +47,7 @@ function Search() {
         ref={ resetMe }
         className="input max-w-xs bg-gray-300 flex-none ml-5 mr-1 dark:text-white dark:bg-gray-600 focus:outline-0"
       />
-      <ul tabIndex="0" className="dropdown-content menu shadow bg-base-100 w-full flex-none ml-5 dark:text-white left-0 mt-2 max-h-96 overflow-y-auto">
+      <ul className="dropdown-content menu shadow bg-base-100 w-full flex-none ml-5 dark:text-white left-0 mt-2 max-h-96 overflow-y-auto">
         { lists }
       </ul>
     </div>  

@@ -62,8 +62,8 @@ function YesCart() {
             </div>
     
             {/* <!-- X 버튼 --> */}
-            <button className="btn btn-square btn-outline absolute bottom-8 right-8 border-gray-200" onClick={ () => delItem(id) }>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 stroke-gray-400 dark:hover:stroke-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            <button className="btn btn-square btn-outline absolute bottom-3 2xl:top-3 right-3 border-0 hover:bg-inherit" onClick={ () => delItem(id) }>
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 stroke-black dark:stroke-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
           </div>
     
